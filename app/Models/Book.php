@@ -14,22 +14,30 @@ class Book extends Model
         return $this->hasMany(Review::class);
     }
 
+    public function scopeWithReviewsCount(Builder $query, $from = null, $to = null): Builder | QueryBuilder{
+        return $query->withCount(
+            [
+                'reviews' => fn (Builder $q) => $this->dateRangeFilter($q, $from, $to)
+            ]);
+    }
+
+    public function scopeWithAvgRating(Builder $query, $from = null, $to = null): Builder | QueryBuilder{
+        return  $query->withAvg([
+            'reviews' => fn (Builder $q) => $this->dateRangeFilter($q, $from, $to)
+        ],'rating');
+    }
+
     public function scopeTitle(Builder $query, String $title): Builder{
         return $query->where('title','like','%'. $title .'%');
     }
 
     public function scopePopular(Builder $query, $from = null, $to = null): Builder{
-        return $query->withCount(
-            [
-                'reviews' => fn (Builder $q) => $this->dateRangeFilter($q, $from, $to)
-            ])
+        return $query->withReviewsCount()
             ->orderBy('reviews_count','DESC');
     }
 
     public function scopeHighestRated(Builder $query, $from = null, $to = null): Builder{
-        return  $query->withAvg([
-            'reviews' => fn (Builder $q) => $this->dateRangeFilter($q, $from, $to)
-        ],'rating')
+        return  $query->withAvgRating()
             ->orderBy('reviews_avg_rating','DESC');
     }
 
