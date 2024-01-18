@@ -1,11 +1,11 @@
 About the project:
 <br>
 <br>
-Our web application, built with Laravel, PHP, and MySQL, serves as an interactive platform for book enthusiasts. It’s a comprehensive book review system where users can explore a vast library of books, each detailed with the book’s title and author information. This data is efficiently populated using Laravel’s seeder functionality.<br><br>
+My web application, built with Laravel, PHP, and MySQL, serves as an interactive platform for book enthusiasts. It’s a comprehensive book review system where users can explore a vast library of books, each detailed with the book’s title and author information. This data is efficiently populated using Laravel’s seeder functionality.<br>
 
-The application offers a unique feature where users can view reviews for a specific book, providing them with diverse perspectives before they dive into reading. Each review is a thoughtful critique, with a minimum character limit of 15 to ensure quality and meaningful feedback. If a review doesn’t meet this requirement, the application smartly triggers an error message, guiding users to enrich their reviews.<br><br>
+The application offers a unique feature where users can view reviews for a specific book, providing them with diverse perspectives before they dive into reading. Each review is a thoughtful critique, with a minimum character limit of 15 to ensure quality and meaningful feedback. If a review doesn’t meet this requirement, the application smartly triggers an error message, guiding users to enrich their reviews.<br>
 
-Moreover, users can contribute to the community by creating new reviews. They can share their insights and rate the books on a scale<br><br>
+Moreover, users can contribute to the community by creating new reviews. They can share their insights and rate the books on a scale<br>
 
 How to build the project:<br>
 
