@@ -9,7 +9,7 @@ Moreover, users can contribute to the community by creating new reviews. They ca
 
 How to build the project:<br>
 
-Tou build this project you will need to have PHP and MySQL, in you machine;<br>
+To build this project, you will need to have PHP and MySQL installed on your machine.;<br>
 Copy the file named **.env.example** and paste it, rename the file to **.env**, and make this changes:<br>
 1º - put the name of the database in the DB_DATABASE=<br>
 2º - put the username in the DB_USERNAME=<br>
